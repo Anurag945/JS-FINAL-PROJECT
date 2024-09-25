@@ -1,3 +1,25 @@
+@font-face {
+    font-family: "plain light";
+    src: url(./font/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: "plain light";
+    src: url(./font/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./font/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./font/silkserif-lightitalic-webfont.ttf);
+}
+
+
+
 
 *{
     margin:0;
@@ -203,6 +225,8 @@ html,body{
     padding: 22vh;
     position: relative;
     /* background-color: red; */
+    
+    
 
 }
 
@@ -211,6 +235,9 @@ html,body{
     width: 70vw;
     position: relative;
     left: 24.5%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
     
 }
 #video-container img{
@@ -225,6 +252,7 @@ html,body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity:0;
 }
 
 #video-cursor{
@@ -262,6 +290,7 @@ html,body{
     text-transform:uppercase ;
     position: relative;
     margin-left:28vw ;
+ 
  
 }
 #page3 h1::before{
@@ -304,9 +333,10 @@ html,body{
     width: 22vw;
 }
 
-.image-div:nth-child(4){
+.image-div:nth-child(6){
     height: 28vw;
     width: 22vw;
+    
 }
 
 .image-div img{
@@ -418,6 +448,7 @@ html,body{
     /* background-color: rgb(18, 17, 17); */
     position: relative;
     padding:6vh 0;
+    margin-top: 60vh;
     
 }
 
@@ -441,13 +472,13 @@ html,body{
     right: 105%;
 }
 
-#page4-content .underline{
+ #page4-content .underline{
     height: 1px;
     width: 100%;
     background-color: #fff;
     margin:3vw 0;
     
-}
+} 
 
 
 #page4-content>p{
@@ -638,8 +669,17 @@ html,body{
 }
 
 
+#flag{
+    height: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform:translate(-50%,-50%);
+    opacity: 0;
+}
 
-/* 2nd image small
-page aling / underline
-download images
-mouse transparent */
+#hero3{
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
+}

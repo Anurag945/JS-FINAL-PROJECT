@@ -94,8 +94,54 @@ Shery.mouseFollower({
 });
 Shery.makeMagnet("#nav-part2 h4");
 
-}
+var videoContainer=document.querySelector("#video-container");
+var video = document.querySelector("#video-container video")
+videoContainer.addEventListener("mouseenter",function(){
+// videoContainer.addEventListener("mousemove",function(dets){
+//     gsap.to(".mousefollower",{
+//         opacity:0
+//     })
+//     gsap.to("#video-cursor",{
+//         left:dets.x -500,
+//         y:dets.y -305
+//     })
+// });
 
+videoContainer.addEventListener("mouseleave",function(){
+    gsap.to(".mousefollower",{
+        display:"initial"
+    })
+
+    // gsap.to("#video-cursor",{
+    //     left:"-8%",
+    //     top:"80%"
+    // })
+});
+
+var flag=0
+videoContainer.addEventListener("click",function(){
+    if(flag == 0){
+    video.play()
+    video.style.opacity=1
+    document.querySelector("#video-cursor").innerHTML=`<i class="ri-pause-line"></i> `
+    gsap.to("#video-cursor",{
+        scale:0.5
+    })
+    flag = 1
+  }else{
+    video.pause()
+    video.style.opacity=0
+    document.querySelector("#video-cursor").innerHTML=`<i class="ri-play-fill"></i>`
+    gsap.to("#video-cursor",{
+        scale:1
+    })
+    flag = 1
+  }
+})
+
+
+});
+}
 function sheryAnimation(){
     Shery.imageEffect(".image-div",{
         style:5,
@@ -103,12 +149,36 @@ function sheryAnimation(){
         gooey:true
     })
 }
+function flagAnimation(){
+document.addEventListener("mousemove",function(dets){
+    gsap.to("#flag",{
+        x:dets.x,
+        y:dets.y
+       
+    })
+})
+
+document.querySelector("#hero3").addEventListener("mouseenter",function(){
+    gsap.to("#flag",{
+        opacity:1
+    })
+})
+
+document.querySelector("#hero3").addEventListener("mouseleave",function(){
+    gsap.to("#flag",{
+        opacity:0
+    })
+})
+
+}
 
 
 loadingAnimation();
- mouscontrol();
+mouscontrol();
 locomotiveAnimation();
 sheryAnimation();
- 
+flagAnimation();
+
+
 
 
