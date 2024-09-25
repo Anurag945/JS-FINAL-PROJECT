@@ -508,6 +508,7 @@ html,body{
     position:relative;
     top: -32vh;
     left: 22vw;
+    margin-bottom: 30vh;
 
 }
 
@@ -542,6 +543,7 @@ html,body{
     white-space: nowrap;
     overflow-x:hidden;
     margin-bottom:-2vw;
+    margin-top: 2vh;
 }
 
 .elem h1{
