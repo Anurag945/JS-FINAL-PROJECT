@@ -51,7 +51,7 @@ tl.from("#line1-part1",{
             }else{
              h5timer.innerHTML=grow
             }
-         }, 33);
+         },28);
     }
 });
 tl.to(".line h2",{
@@ -61,7 +61,7 @@ tl.to(".line h2",{
 tl.to("#loader",{
     opacity:0,
     duration:0.2,
-    delay:0 // later change this to 4
+    delay:2.2 // change to 4
 });
 tl.from("#page1",{
     delay:0.2,
